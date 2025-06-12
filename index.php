@@ -16,7 +16,7 @@ include "includes/header.php"
 </form>
 
 <hr>
-<form action="">
+<form action="archivos_backend/validar_reg.php" method="post">
 <h5>Resgistrarse</h5>
 <br>
 <input type="text" name="nombre" placeholder="Nombre completo">
@@ -33,7 +33,7 @@ Seleccione su rol
     <option value="Admin">Administrador</option>
 </select>
 <br>
-<input type="submit" value="Registrarse">
+<input type="submit" value="Registrarse"|>
 </form>
 
 </div>

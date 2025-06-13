@@ -19,7 +19,9 @@ include "includes/header.php"
 <form action="archivos_backend/validar_reg.php" method="post">
 <h5>Resgistrarse</h5>
 <br>
-<input type="text" name="nombre" placeholder="Nombre completo">
+<input type="text" name="nombre" placeholder="Nombre">
+<br>
+<input type="text" name="apellidos" placeholder="apellidos">
 <br>
 <input type="text" name="correo" placeholder="Correo electrónico">
 <br>

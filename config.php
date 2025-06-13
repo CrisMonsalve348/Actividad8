@@ -1,8 +1,8 @@
 <?php 
 
-define('DB_SERVIDOR', 'localhost');
-define('DB_USUARIO', 'root');
-define('DB_CONTRASEÑA', "123456");
+define('DB_SERVIDOR', "localhost");
+define('DB_USUARIO', "root");
+define('DB_CONTRASENA', "");
 define('DB_NOMBRE', "tienda_virtual");
 
 // Crear la conexion a la DB

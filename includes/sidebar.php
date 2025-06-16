@@ -1,3 +1,4 @@
+
 <div class="barra-lateral">
 
 <h5>Carrito</h5>
@@ -9,7 +10,15 @@
 </ul>
 <hr>
 
-<h5>Nombre de usuario</h5>
+<h5>
+
+<?php 
+
+
+ echo $_SESSION["usuario"]["nombre"]." ".$_SESSION["usuario"]["apellidos"] ;
+
+?>
+</h5>
 <h3>Gestionar productos</h3>
 <ul>
 <li>Gestionar categorías</li>

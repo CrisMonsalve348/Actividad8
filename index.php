@@ -4,12 +4,12 @@ include "includes/header.php"
 
 ?>
 <div class="sidebar_login">
-<form action="">
+<form action="archivos_backend/validar_login.php" method="post">
 <h5>Iniciar sesion</h5>
 <br>
 <input type="text" name="email" placeholder="Email">
 <br>
-<input type="text" name="contraseña" placeholder="Contraseña">
+<input type="password" name="contraseña" placeholder="Contraseña">
 <br>
 <input type="submit" value="iniciar sesion">
 
@@ -35,7 +35,7 @@ Seleccione su rol
     <option value="Admin">Administrador</option>
 </select>
 <br>
-<input type="submit" value="Registrarse"|>
+<input type="submit" value="Registrarse">
 </form>
 
 </div>

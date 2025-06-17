@@ -10,23 +10,16 @@
     <link rel="stylesheet" href="estilos/estilo_index.css">
 </head>
 <body>
-<header>
-    <h1>Technology world</h1>
-</header>
-<nav>
-    <ul>
-        <li>
-            Categoria 1
-
-        </li>
-        <li>
-            Categoria 2 
-        </li>
-        <li>
-            Categoria 3
-        </li>
-        <li>
-            categoria 4
-        </li>
-    </ul>
-</nav>
+    <header>
+        <h1>Technology world</h1>
+    </header>
+    <nav>
+        <ul class="categorias">
+            <a href="#">inicio</a>
+            <a href="#">categoria 1 </a>
+            <a href="#">categoria 2 </a>
+            <a href="#">categoria 3 </a>
+            <a href="#">categoria 4 </a>
+        </ul>
+    </nav>
+    

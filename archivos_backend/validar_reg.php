@@ -1,6 +1,8 @@
 <?php 
 require_once ("../config.php");
 
+session_start();
+
 $nombre=$apellido=$email=$password=$rol="";
 $nombreerror=$apellidoerror=$emailerror=$passworderror=$rolerror="";
 
@@ -32,9 +34,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_email=$_POST["correo"];
     if(empty($input_email)){
         $emailerror="El campo de correo no es valido";
+        
+        
     }
     elseif(!filter_var($input_email, FILTER_VALIDATE_EMAIL)){
         $emailerror="El correo escrito no es valido";
+        $_SESSION["error"] = "Por favor ingrese un correo valido!";
+        header("location: ../index.php");
     }
     else{
         $email=$input_email;
@@ -71,7 +77,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
             if(mysqli_stmt_execute($stmt)){
-                header("location:../index.php");
+                header("location: ../index.php");
+                
                 exit();
             }else{
                 echo "Ocurrio un error";

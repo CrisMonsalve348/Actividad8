@@ -1,7 +1,8 @@
 
 <?php 
-include "includes/header.php"
+include "includes/header.php";
 
+session_start();
 ?>
 <div class="sidebar_login">
 <form action="archivos_backend/validar_login.php" method="post">
@@ -19,6 +20,11 @@ include "includes/header.php"
 <form action="archivos_backend/validar_reg.php" method="post">
 <h5>Resgistrarse</h5>
 <br>
+<?php 
+if (!empty($_SESSION["error"])){
+    echo $_SESSION["error"];
+}
+?>
 <input type="text" name="nombre" placeholder="Nombre">
 <br>
 <input type="text" name="apellidos" placeholder="apellidos">

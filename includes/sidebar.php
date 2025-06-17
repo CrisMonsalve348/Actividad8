@@ -1,29 +1,27 @@
 
 <div class="barra-lateral">
 
-<h5>Carrito</h5>
+<h3 class="titulo-carrito">Carrito</h3>
 
-<ul>
-    <li>Productos{cantidad del producto}</li>
-    <li>Total{total}</li>
-    <li>Ver carrito</li>
+<ul class="carrito">
+    <p> Productos</p>
+    <p>Total</p>
+    <a href="#">Ver carrito</a>
 </ul>
 <hr>
 
-<h5>
-
+<h3 class="titulo-usuario"> 
 <?php 
-
-
  echo $_SESSION["usuario"]["nombre"]." ".$_SESSION["usuario"]["apellidos"] ;
-
 ?>
-</h5>
-<h3>Gestionar productos</h3>
-<ul>
-<li>Gestionar categorías</li>
-<li>Gestionar pedidos</li>
-<li>Mis pedidos</li>
-<li>Cerrar sesión</li>
+
+</h3>
+
+<ul class="gestion-usuario">
+    <a href="#">Gestionar productos</a>
+    <a href="#">Gestionar categorias</a>
+    <a href="#">Gestionar pedidos</a>
+    <a href="#">Mis pedidos</a>
+    <button class="cerrar-sesion"> Cerrar sesión </button>
 </ul>
 </div>

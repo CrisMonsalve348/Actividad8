@@ -22,6 +22,10 @@
     <a href="#">Gestionar categorias</a>
     <a href="#">Gestionar pedidos</a>
     <a href="#">Mis pedidos</a>
-    <button class="cerrar-sesion"> Cerrar sesión </button>
+<form action="archivos_backend/logout.php" method="post">
+    <input type="submit" class="cerrar-sesion" name="logout" value="Cerrar sesion">
+</form>
+
 </ul>
 </div>
+

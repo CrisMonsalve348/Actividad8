@@ -1,6 +1,6 @@
 <?php 
 require_once ("../config.php");
-
+session_start();
 
 $email=$password="";
 $emailerror=$passworderror="";
@@ -28,7 +28,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password=$input_contraseña;
     }
 
-    if(empty($emailerror) && empty($passworderror)){
+    if(empty($emailerror) && empty($passworderror)){ 
+        $_SESSION["errorlog"]="";
         $sql="SELECT * FROM usuarios WHERE email=? AND password=?";
         $stmt=mysqli_prepare($conexion, $sql);
          mysqli_stmt_bind_param($stmt, "ss", $email,$password);
@@ -38,23 +39,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           if(mysqli_num_rows($resultado) == 1){
             $usuario = mysqli_fetch_assoc($resultado);
 
-            session_start();
+            
             $_SESSION["usuario"]=$usuario;
            if ($usuario["rol"]=="Usuario"){
             header("location:../index_usuario.php");
            }
            else{
             header("location:../index_admin.php");
+            
            }
           }
           else{
             header("location:../index.php");
+            $_SESSION["errorlog"]="El correo o la contraseña son incorrectos";
                    
         }
           
     }
     else{
+
+        $_SESSION["errorlog"]="ingrese los campos correctamente";
         header("location:../index.php");
+        
     }
     
 }

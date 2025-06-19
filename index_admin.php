@@ -10,7 +10,7 @@ include "includes/header.php"
 include "includes/sidebar.php"
 ?>
 
-<form action="categorias.php" method="POST">
+<form action="archivos_backend/categorias.php" method="POST">
     <input type="text" name="categoria">
 
     <input type="submit" name="subir-categoria">

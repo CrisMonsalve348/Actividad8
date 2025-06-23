@@ -85,3 +85,43 @@ Seleccione su rol
 include "includes/footer.php"
 
 ?>
+require_once ("../config.php");
+session_start();
+
+$categoria = "";
+$categoria_error = "";
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $input_categoria=trim($_POST["categoria"]);
+    if(!empty($input_categoria)){
+        $categoria = $input_categoria;
+
+    
+    }else{
+        $categoria_error = "Campo no valido";
+    }
+
+
+    if(empty($categoria_error)){
+        $_SESSION["error"] = "";
+        $sql = INSERT INTO categorias(nombre) VALUES (?);
+        if($stmt = mysqli_prepare($conexion,$sql)){
+            mysqli_stmt_bind_param($stmt,"s",$param_categoria);
+
+            //Crear parametros
+            $param_categoria = $categoria;
+
+            if(mysqli_stmt_execute($stmt)){
+                header("Location:../index_admin.php");
+
+                exit();
+            }else{
+                echo "Error al crear categoria";
+            }
+        }
+        //cerramos
+        mysqli_stmt_close($stmt);
+    }
+    //Alertas
+mysqli_close($conexion);
+}

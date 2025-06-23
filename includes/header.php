@@ -13,7 +13,28 @@
     <header>
         <h1>Technology world</h1>
     </header>
-    <nav>
+    <?php 
+        require_once "config.php";
+        $sql="SELECT * FROM categorias";
+        $resultado=$conexion->query($sql);
+    ?>
+    <ul class="lista_categorias">
+        <li>
+            <a href="#">inicio</a>
+        </li>
+
+    <?php while ($fila=$resultado->fetch_assoc()): ?>
+        <li>
+            <a href="#">
+    <?php 
+         echo htmlspecialchars($fila["nombre"]);
+    ?>
+            </a>
+        </li>
+    <?php  endwhile; ?>
+    </ul>
+    <?php $conexion->close(); ?>
+    <!-- <nav>
         <ul class="categorias">
             <a href="#">inicio</a>
             <a href="#">categoria 1 </a>
@@ -21,5 +42,5 @@
             <a href="#">categoria 3 </a>
             <a href="#">categoria 4 </a>
         </ul>
-    </nav>
+    </nav> -->
     

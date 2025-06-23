@@ -14,7 +14,7 @@ header{
     background-color: #d8cfe3;
 }
 
-nav{
+.lista_categorias{
     display: flex;
     width: 100%;
     text-align: center;
@@ -24,12 +24,12 @@ nav{
     background-color: #d8cfe3;
 }
 
-.categorias{
+.lista_categorias{
     display: flex;
     gap: 30px;
 }
 
-.categorias a{
+.lista_categorias a{
     text-decoration: none;
     color: black;
     border-right: 1px solid black;
@@ -37,12 +37,81 @@ nav{
     color: #532889;
 }
 
+
+/* Estilos de el login y el registro */
+.sidebar_login{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 20%;
+    height: 80vh;
+    text-align: center;
+    background-color: #fbf1ef;
+    border-right: 1px solid black;
+}
+
+.sidebar_login input{
+    border-radius: 4px;
+    width: 60%;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid black;  
+}
+
+
+/* Login */
+.iniciar_sesion{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#boton_sesion{
+    width: 100px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: #e3f0a9;
+    border: 0.5px solid black;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7) ;
+}
+
+/* Registro */
+.registro{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#select_rol{
+    width: 40%;
+    border: none;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7) ;
+    background-color: #dbf8f9;
+}
+
+#boton_registro{
+    width: 100px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: #e3f0a9;
+    border: 0.5px solid black;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7) ;
+}
+
+
+
+
+
 /*Estilos de la navegación de la izquierda (carrito - gestión - registro y login)*/
 .barra-lateral{
     padding-top: 15px;
     width: 25%;
-    height: 80vh;
+    height: 70vh;
     background-color: #fbf1ef ;
+    
 }
 
 .titulo-carrito{
@@ -54,7 +123,7 @@ nav{
     flex-direction: column;
     margin-top: 14px;
     height: 13vh;
-    gap: 5px;
+    gap: 10px;
     color: blue;
 }
 
@@ -62,16 +131,17 @@ nav{
     text-decoration: none;
 }
 
+
 /* Estilos para la gestion de usuario*/
 .titulo-usuario{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 70px;
 }
 
 .gestion-usuario{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     margin-top: 14px;
     
 }
@@ -81,16 +151,42 @@ nav{
     color: blue;
 }
 
-.cerrar-sesion{
+.boton_cerrar{
     width: 50%;
-    background-color: #cdbce1;
+    background-color: #e3f0a9;
     border-radius: 4px;
     border: none;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
     margin-top: 5px;
+    cursor: pointer;
 }
-.cerrar-sesion:hover{
-    transform: scale(1.01);
+
+/* Index de administrador: crear categoria */
+.crear_categoria{
+    width: 25%;
+    height: 20vh;
+    background-color: #fbf1ef;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
+}
+
+.crear_categoria input{
+    border-radius: 4px;
+    width: 60%;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid black; 
+}
+
+#boton_crearCateg{
+    width: 50%;
+    background-color: #e3f0a9;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    margin-top: 5px;
     cursor: pointer;
 }
 

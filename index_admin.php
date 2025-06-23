@@ -10,11 +10,13 @@ include "includes/header.php"
 include "includes/sidebar.php"
 ?>
 
-<form action="archivos_backend/categorias.php" method="post">
-CATEGORIA    
-<input type="text" name="categoria">
+<form action="archivos_backend/categorias.php" method="post" class="crear_categoria">
+    <h4>Crear categoria:</h4>
+    <br>    
+    <input type="text" name="categoria">
+    <br>
+    <input type="submit" name="subir-categoria" value="crear" id="boton_crearCateg">
 
-    <input type="submit" name="subir-categoria" value="crear">
     <?php if(!empty($_SESSION["errorcategoria"])): ?>
         <div id="alertacategoria" style="color:red; font-size=0.5rem; font-family:sans-serif; width:150px;">
         <?php 

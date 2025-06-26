@@ -9,6 +9,7 @@ include "includes/header.php"
 include "includes/sidebar.php"
 
 ?>
+<a href="producto_usuario.php">ir</a>
 <?php 
 include "includes/footer.php"
 

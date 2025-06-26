@@ -1,0 +1,87 @@
+.principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+#titulo_producto{
+display: flex;
+justify-self: flex-start;
+align-self: center;
+}
+.product_conteiner{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+.img_container{
+    width: 250px;
+    height: 250px;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.img_container img{
+    width: 200px;
+    height: 200px;
+}
+.info_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 65%;
+}
+.tituloyprecio{
+    display: flex;
+    flex-direction: row;
+    gap: 55%;
+    
+}
+.tituloyprecio h2{
+    font-family: DidactGothic;
+    font-weight: bold;
+}
+.parrafo{
+   font-family: DidactGothic;
+   font-size: 20px;
+}
+.stacks{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    gap: 10px;
+}
+.stacks p{
+    color: red;
+}
+.botones{
+     display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    gap: 30px;
+}
+#compra{
+    background-color: #BBE1F1;
+    border: none;
+    border-radius: 5px;
+    width: 15vw;
+    height: 40px;
+}
+#vermas{
+    background-color: #C1F6AB;
+    border: none;
+    border-radius: 5px;
+    width: 15vw;
+    height: 40px;
+}

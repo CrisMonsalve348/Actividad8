@@ -44,7 +44,7 @@ header{
     flex-direction: column;
     gap: 30px;
     width: 20%;
-    height: 80vh;
+    height: 100%;
     text-align: center;
     background-color: #fbf1ef;
     border-right: 1px solid black;
@@ -197,4 +197,6 @@ footer{
     text-align: center;
     color: black;
     background-color: #d8cfe3;
+    position: fixed;
+    width: 100%;
 }

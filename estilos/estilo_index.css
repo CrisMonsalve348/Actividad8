@@ -190,6 +190,42 @@ header{
     cursor: pointer;
 }
 
+/* Estilos para crear los productos (Index de admin)*/
+.crear_producto{
+    width: 25%;
+    height: auto;
+    background-color: #fbf1ef;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
+}
+
+.crear_producto input{
+    border-radius: 4px;
+    width: 60%;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid black; 
+}
+
+.crear_producto textarea{
+    border-radius: 4px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#boton_crearproducto{
+    width: 50%;
+    background-color: #e3f0a9;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    margin-top: 5px;
+    cursor: pointer; 
+}
+
+
 
 
 /* Estilos para el footer */

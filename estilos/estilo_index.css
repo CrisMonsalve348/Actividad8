@@ -52,7 +52,7 @@ main{
     height: 100%;
     text-align: center;
     background-color: #fbf1ef;
-    border-right: 1px solid black;
+    
 }
 
 .sidebar_login input{
@@ -107,7 +107,10 @@ main{
 }
 
 
-
+.principalusuario{
+    display: flex;
+    flex-direction: row;
+}
 
 
 /*Estilos de la navegación de la izquierda (carrito - gestión - registro y login)*/
@@ -248,8 +251,8 @@ main{
     gap: 5px;
     border-radius: 10px;
 }
-.casilla_producto button{
-    width: 85%;
+.casilla_producto input{
+    width: 95%;
     border-radius: 5px;
     border: none;
     height: 30px;
@@ -258,6 +261,10 @@ main{
     object-fit: cover;
     width: 130px;
     height: 150px;
+}
+
+.vista_productos{
+    width: 75%;
 }
 
 

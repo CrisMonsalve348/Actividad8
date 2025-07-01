@@ -8,19 +8,24 @@ include "includes/header.php";
 include "includes/sidebar.php";
 //<h1 id="titulo_producto">Iphone 13Pro</h1>
 ?>
+ <?php 
+  $sql="SELECT * FROM productos";
+$resultado=$conexion->query($sql);
+
  
+ ?>
 
 <section class="product_conteiner">
+<?php while ($fila=$resultado->fetch_assoc()): 
+    if($_POST["id"]==$fila["id"]):?>
 
 <div class="img_container">
-    <img src="img/Portadas_iPhone13Pro.webp" alt="imagen">
+    <img src="<?php echo $fila["imagen"]; ?>" alt="imagen">
 </div>
 <div class="info_container">
-    <div class="tituloyprecio"><h2>Categorias</h2> <h2>32000000 COP</h2></div>
+    <div class="tituloyprecio"><h2>Categorias</h2> <h2><?php echo "$".$fila["precio"]; ?></h2></div>
 
-<p class="parrafo">El iPhone 13 Pro es un smartphone de alta gama de Apple que ofrece un rendimiento potente gracias a su chip A15 Bionic, una pantalla Super Retina XDR de 6.1 pulgadas con 
-    tecnología ProMotion de 120 Hz, y un sistema de triple cámara avanzado con modo noche y 
-    grabación en ProRes.</p>
+<p class="parrafo"><?php echo $fila["descripcion"]; ?></p>
     <div class="stacks">
     <p>Stock</p>
     <input type="number">
@@ -28,6 +33,10 @@ include "includes/sidebar.php";
     <div class="botones">
         <button id="compra">Comprar</button>
         <button id="vermas">Ver otros productos</button>
+        <?php
+        endif;
+         endwhile;
+        ?>
     </div>
 </div>
 </section>

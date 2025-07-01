@@ -79,7 +79,7 @@ endif;
     </form>
 
 </div>
-<section>
+<section class = "vista_productos">
      <?php 
     
         $sql="SELECT * FROM productos";
@@ -95,14 +95,16 @@ endif;
         <img src="<?php echo ($fila["imagen"]); ?>" alt="producto" class="imagen_producto">
             <p><?php echo $fila["nombre"]; ?> </p>
             <p><?php echo "$".$fila["precio"]; ?></p>
-            <button>Comprar</button>
+            <form action="producto_usuario.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $fila["id"]; ?>">
+                <input type="submit" value="Comprar">
+            </form>
             
         </li>
     <?php  endwhile; ?>
     </ul>
 
 </section>
-
 
 <?php 
 include "includes/footer.php"

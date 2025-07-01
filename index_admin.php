@@ -34,7 +34,7 @@ include "includes/sidebar.php"
 </form>
 
 
-<form action="archivos_backend/productos.php" method="post" enctype="multipart/form-data" class="crear_producto">
+<form action="archivos_backend/productos.php" method="post" enctype="multipart/form-data" class="crear_producto" enctype="multipart/form-data">
     <h4>Crear producto:</h4>
     <br>
     <label> Seleccionar categoria: </label>

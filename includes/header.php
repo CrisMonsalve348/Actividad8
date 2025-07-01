@@ -44,13 +44,5 @@ if(!isset($_SESSION["usuario"])){
     <?php  endwhile; ?>
     </ul>
     
-    <!-- <nav>
-        <ul class="categorias">
-            <a href="#">inicio</a>
-            <a href="#">categoria 1 </a>
-            <a href="#">categoria 2 </a>
-            <a href="#">categoria 3 </a>
-            <a href="#">categoria 4 </a>
-        </ul>
-    </nav> -->
+ 
     

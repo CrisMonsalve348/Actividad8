@@ -17,14 +17,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $imagen = null;
     if(isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0){
-        $directorio = "img/";
+        $directorio = "C:/xampp/htdocs/actividad8rep/Actividad8/img/";
+        $directorioproyecto="img/";
     if (!file_exists($directorio)) {
         mkdir($directorio, 0777, true);
-    }
-    $nombreImagen = time() . "_" . basename($_FILES["imagen"]["name"]);
-    $rutaImagen = $directorio . $nombreImagen;
+        echo "exito";
 
-    if(move_uploaded_file($_FILES["imagen"]["tmp_name"], $rutaImagen)){
+    }
+    else {echo "fracaso";}
+    $nombreImagen = time() . "_" . basename($_FILES["imagen"]["name"]);
+    $rutaImagen = $directorioproyecto . $nombreImagen;
+
+    if(move_uploaded_file($_FILES["imagen"]["tmp_name"], $directorio.$nombreImagen)){
         $imagen = $rutaImagen;
     }
 }
@@ -37,6 +41,7 @@ $sql = "INSERT INTO productos (categoria_id, nombre, descripcion, precio, stock,
 
 if($conexion->query($sql)){
     echo "Producto creado exitosamente.";
+   header("location:../index_admin.php");
 } else {
     echo "Error: " . $conexion->error;
 }

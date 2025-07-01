@@ -22,6 +22,7 @@ header{
     justify-content: center;
     padding-top: 10px;
     background-color: #d8cfe3;
+    list-style: none;
 }
 
 .lista_categorias{
@@ -35,6 +36,10 @@ header{
     border-right: 1px solid black;
     padding-right: 15px;
     color: #532889;
+}
+main{
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -224,8 +229,36 @@ header{
     margin-top: 5px;
     cursor: pointer; 
 }
+.productos{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
-
+.casilla_producto{
+    background-color: #B2BABB;
+    width: 150px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+}
+.casilla_producto button{
+    width: 85%;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+.imagen_producto{
+    object-fit: cover;
+    width: 130px;
+    height: 150px;
+}
 
 
 /* Estilos para el footer */

@@ -4,6 +4,7 @@ include "includes/header.php";
 
 session_start();
 ?>
+<main>
 <div class="sidebar_login">
     <form action="archivos_backend/validar_login.php" method="post" class="iniciar_sesion">
         <h5>INICIAR SESIÓN</h5>
@@ -78,6 +79,29 @@ endif;
     </form>
 
 </div>
+<section>
+     <?php 
+    
+        $sql="SELECT * FROM productos";
+        $resultado=$conexion->query($sql);
+    ?>
+    <ul class="productos">
+        
+
+    <?php while ($fila=$resultado->fetch_assoc()): ?>
+        <li class="casilla_producto">
+            
+    
+        <img src="<?php echo ($fila["imagen"]); ?>" alt="producto" class="imagen_producto">
+            <p><?php echo $fila["nombre"]; ?> </p>
+            <p><?php echo "$".$fila["precio"]; ?></p>
+            <button>Comprar</button>
+            
+        </li>
+    <?php  endwhile; ?>
+    </ul>
+
+</section>
 
 
 <?php 

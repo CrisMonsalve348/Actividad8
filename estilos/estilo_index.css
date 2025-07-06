@@ -298,3 +298,14 @@ footer{
   display: inline-flex;
   margin-left: auto; /* si quieres mandarlo a la derecha */
 }
+/*estilo de la pagina de gestion de productos*/
+.principalproductos{
+    display: flex;
+    flex-direction: row;
+}
+
+.lista_productos_gestion{
+display: flex;
+    gap: 30px;
+    flex-direction: column;
+}

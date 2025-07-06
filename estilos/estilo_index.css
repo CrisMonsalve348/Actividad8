@@ -276,3 +276,25 @@ footer{
     position: fixed;
     width: 100%;
 }
+
+/*estilo de la pagina de gestion de categorias*/
+.principalcategorias{
+    display: flex;
+    flex-direction: row;
+}
+
+.lista_categorias_gestion{
+   display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.fila_de_gestion{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.fila_de_gestion form {
+  display: inline-flex;
+  margin-left: auto; /* si quieres mandarlo a la derecha */
+}

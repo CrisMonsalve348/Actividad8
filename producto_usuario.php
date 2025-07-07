@@ -11,10 +11,7 @@ include "includes/sidebar.php";
  <?php 
   $sql="SELECT * FROM productos";
 $resultado=$conexion->query($sql);
-
- 
  ?>
-
 <section class="product_conteiner">
 <?php while ($fila=$resultado->fetch_assoc()): 
     if($_POST["id"]==$fila["id"]):?>
@@ -33,6 +30,7 @@ $resultado=$conexion->query($sql);
     <div class="botones">
         <button id="compra">Comprar</button>
         <button id="vermas">Ver otros productos</button>
+        <button id="agrega"><a href="carrito_vista.php"></a>Agregar al carrito</button>
         <?php
         endif;
          endwhile;
@@ -52,3 +50,15 @@ $resultado=$conexion->query($sql);
 include "includes/footer.php";
 
 ?>
+<div class="producto-acciones">
+    <form action="archivos_backend/carrito.php" method="POST">
+        <input type="hidden" name="producto_id" value="<?php echo $producto['id']; ?>">
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="<?php echo $producto['stock']; ?>" class="form-control">
+        </div>
+        <button type="submit" name="agregar_carrito" class="btn btn-primary">
+            <i class="fas fa-shopping-cart"></i> Agregar al carrito
+        </button>
+    </form>
+</div>

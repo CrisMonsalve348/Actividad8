@@ -1,0 +1,107 @@
+/* Contenedor principal del pedido - establece el ancho máximo y el diseño básico */
+.container-pedido {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el título principal del pedido */
+.container-pedido h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* Sección que muestra el resumen del carrito de compras */
+.resumen-carrito {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el título del resumen del carrito */
+.resumen-carrito h3 {
+    color: #2196F3;
+    margin-bottom: 15px;
+}
+
+/* Contenedor del formulario de pedido */
+.form-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada grupo de campos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Estilo para las etiquetas de los campos */
+.form-group label {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Estilo base para los campos de entrada */
+.form-control {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Efecto al enfocar los campos de entrada */
+.form-control:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76,175,80,0.2);
+}
+
+/* Estilo específico para áreas de texto */
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Estilo para el botón de confirmar pedido */
+.btn-confirmar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+/* Efectos al pasar el mouse sobre el botón de confirmar */
+.btn-confirmar:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container-pedido {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+}

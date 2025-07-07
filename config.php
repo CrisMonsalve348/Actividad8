@@ -12,7 +12,4 @@ $conexion = mysqli_connect(DB_SERVIDOR, DB_USUARIO, DB_CONTRASENA, DB_NOMBRE);
 if($conexion === false){
     die("ERROR: No se puede conectar" . mysqli_connect_error());
 } 
-
-
-
 ?>

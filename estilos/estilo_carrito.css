@@ -1,0 +1,86 @@
+/* Contenedor principal con padding interno */
+.container {
+    padding: 20px;
+}
+/* Estilo base para la tabla con fondo blanco, bordes redondeados y sombra suave */
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Estilo para el encabezado de la tabla con fondo gris claro y borde inferior */
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+/* Efecto hover para las filas de la tabla, cambia el color de fondo al pasar el mouse */
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+/* Estilo para el botón de tipo danger con padding y bordes redondeados */
+.btn-danger {
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.btn-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.text-center {
+    font-style: italic;
+    color: #6c757d;
+}
+tfoot tr td {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+.alert {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+}
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.table {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.3s;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}
+.text-center {
+    font-style: italic;
+    color: #6c757d;
+    padding: 20px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}

@@ -17,7 +17,8 @@ if(!isset($_SESSION["usuario"])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilo_index.css">
-    <link rel="stylesheet" href="estilos/estilo_producto.css">
+    <link rel="stylesheet" href="estilos/estilo_pedido.css">
+    <link rel="stylesheet" href="estilos/estilo_vista.css">
 </head>
 <body>
     <header>

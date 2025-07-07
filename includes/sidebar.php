@@ -17,8 +17,8 @@
     </h3>
 
     <ul class="gestion-usuario">
-        <a href="#">Gestionar productos</a>
-        <a href="#">Gestionar categorias</a>
+        <a href="gestionproductos.php">Gestionar productos</a>
+        <a href="gestioncategorias.php">Gestionar categorias</a>
         <a href="#">Gestionar pedidos</a>
         <a href="#">Mis pedidos</a>
     <form action="archivos_backend/logout.php" method="post">

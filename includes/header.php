@@ -25,24 +25,39 @@ if(!isset($_SESSION["usuario"])){
         <h1>Technology world</h1>
     </header>
     <?php 
+        $archivo_actual = basename($_SERVER['PHP_SELF']);
         require_once "config.php";
         $sql="SELECT * FROM categorias";
         $resultado=$conexion->query($sql);
     ?>
     <ul class="lista_categorias">
         <li>
-            <a href="#">inicio</a>
+            <form action="<?php echo $archivo_actual; ?>" method="post">
+                <input type="hidden" name="inicio" value="1" >
+                <input type="submit" value="inicio">
+            </form>
         </li>
+        
+        <?php
+        $destino = "index.php"; // por defecto
 
-    <?php while ($fila=$resultado->fetch_assoc()): ?>
+        if ($archivo_actual === "index_admin.php") {
+            $destino = "index_admin.php";
+        } elseif ($archivo_actual === "index_usuario.php") {
+            $destino = "index_usuario.php";
+        }
+        
+
+        ?>
+
+        <?php while ($fila = $resultado->fetch_assoc()): ?>
         <li>
-            <a href="#">
-    <?php 
-         echo htmlspecialchars($fila["nombre"]);
-    ?>
+            <a href="<?php echo $destino . '?categoria_id=' . $fila['id']; ?>">
+                <?php echo htmlspecialchars($fila["nombre"]); ?>
             </a>
         </li>
-    <?php  endwhile; ?>
+        <?php endwhile; ?>
+
     </ul>
     
  

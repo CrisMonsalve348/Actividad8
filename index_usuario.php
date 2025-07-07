@@ -14,8 +14,18 @@ include "includes/sidebar.php"
 <section class = "vista_productos">
      <?php 
     
-        $sql="SELECT * FROM productos";
-        $resultado=$conexion->query($sql);
+        if (
+    (isset($_GET['categoria_id']) && is_numeric($_GET['categoria_id']))
+    || (isset($_POST['categoria_id']) && is_numeric($_POST['categoria_id']))
+) {
+    // Soporte tanto para GET como POST en caso de que quieras usar uno u otro
+    $categoria_id = $_GET['categoria_id'] ?? $_POST['categoria_id'];
+    $sql = "SELECT * FROM productos WHERE categoria_id = $categoria_id";
+} else {
+    // Mostrar todos los productos si no hay categoría activa o si se envió "inicio"
+    $sql = "SELECT * FROM productos";
+}
+$resultado = $conexion->query($sql);
     ?>
     <ul class="productos">
         

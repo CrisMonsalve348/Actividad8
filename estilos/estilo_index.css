@@ -232,6 +232,14 @@ main{
     margin-top: 5px;
     cursor: pointer; 
 }
+
+
+/*Estilos de cristian decada producto*/
+.vista_productos{
+    width: 75%;
+    display: flex;
+}
+
 .productos{
     margin-top: 20px;
     display: flex;
@@ -263,9 +271,7 @@ main{
     height: 150px;
 }
 
-.vista_productos{
-    width: 75%;
-}
+
 
 
 /* Estilos para el footer */

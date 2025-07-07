@@ -82,8 +82,17 @@ endif;
 <section class = "vista_productos">
      <?php 
     
-        $sql="SELECT * FROM productos";
-        $resultado=$conexion->query($sql);
+        if (isset($_GET['categoria_id']) && is_numeric($_GET['categoria_id'])) {
+            $categoria_id = $_GET['categoria_id'];
+            $sql = "SELECT * FROM productos WHERE categoria_id = $categoria_id";
+        }elseif(isset($_POST['inicio'])){
+            $sql = "SELECT * FROM productos";
+            $resultado = $conexion->query($sql);
+        }
+        else {
+            $sql = "SELECT * FROM productos";
+        }
+        $resultado = $conexion->query($sql);
     ?>
     <ul class="productos">
         

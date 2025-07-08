@@ -24,13 +24,16 @@ $resultado=$conexion->query($sql);
 
 <p class="parrafo"><?php echo $fila["descripcion"]; ?></p>
     <div class="stacks">
+        <form action="archivos_backend/carrito.php" method="post">
     <p>Stock</p>
-    <input type="number">
+    <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="<?php echo $fila['stock']; ?>" class="form-control">
     </div>
     <div class="botones">
-        <button id="compra">Comprar</button>
-        <button id="vermas">Ver otros productos</button>
-        <button id="agrega"><a href="carrito_vista.php"></a>Agregar al carrito</button>
+
+       
+        <input type="hidden" name="id_producto" Value="<?php echo $fila["id"]; ?>">
+        <input type="submit" id="agrega" Value="Agregar al carrito" name="Agregar">
+        </form>
         <?php
         endif;
          endwhile;
@@ -50,15 +53,3 @@ $resultado=$conexion->query($sql);
 include "includes/footer.php";
 
 ?>
-<div class="producto-acciones">
-    <form action="archivos_backend/carrito.php" method="POST">
-        <input type="hidden" name="producto_id" value="<?php echo $producto['id']; ?>">
-        <div class="form-group">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="<?php echo $producto['stock']; ?>" class="form-control">
-        </div>
-        <button type="submit" name="agregar_carrito" class="btn btn-primary">
-            <i class="fas fa-shopping-cart"></i> Agregar al carrito
-        </button>
-    </form>
-</div>

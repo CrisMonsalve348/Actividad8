@@ -42,7 +42,10 @@ main{
     flex-direction: row;
 }
 
-
+.principal-admin{
+    display: flex;
+    flex-direction: row;
+}
 /* Estilos de el login y el registro */
 .sidebar_login{
     display: flex;
@@ -111,15 +114,23 @@ main{
     display: flex;
     flex-direction: row;
 }
-
+.categoriasyproductos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 /*Estilos de la navegación de la izquierda (carrito - gestión - registro y login)*/
 .barra-lateral{
     padding-top: 15px;
-    width: 25%;
-    height: 70vh;
+    width: 30%;
+    height: 100%;
     background-color: #fbf1ef ;
-    
+    display: flex;
+    flex-direction: column;
+      border-right: 2px solid #ccc;
+    padding-right: 10px;
+    gap: 30px;
 }
 
 .titulo-carrito{
@@ -171,7 +182,7 @@ main{
 
 /* Index de administrador: crear categoria */
 .crear_categoria{
-    width: 25%;
+    width: 100%;
     height: 20vh;
     background-color: #fbf1ef;
     display: flex;
@@ -200,8 +211,8 @@ main{
 
 /* Estilos para crear los productos (Index de admin)*/
 .crear_producto{
-    width: 25%;
-    height: auto;
+    width: 100%;
+    
     background-color: #fbf1ef;
     display: flex;
     flex-direction: column;

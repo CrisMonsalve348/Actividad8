@@ -7,7 +7,7 @@ include "includes/header.php"
 ?>
 <main class="principalusuario">
 <?php 
-include "includes/sidebar.php"
+include "includes/sidebarusuario.php"
 
 ?>
 

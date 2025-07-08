@@ -6,7 +6,7 @@ include "includes/header.php";
 ?>
 <main class="principalcategorias">
 <?php 
-include "includes/sidebar.php";
+include "includes/sidebaradmin.php";
 ?>
 
 <?php 

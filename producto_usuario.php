@@ -5,7 +5,7 @@ include "includes/header.php";
 ?>
 <main class="principal">
 <?php 
-include "includes/sidebar.php";
+include "includes/sidebarusuario.php";
 //<h1 id="titulo_producto">Iphone 13Pro</h1>
 ?>
  <?php 

@@ -19,6 +19,8 @@ if(!isset($_SESSION["usuario"])){
     <link rel="stylesheet" href="estilos/estilo_index.css">
     <link rel="stylesheet" href="estilos/estilo_pedido.css">
     <link rel="stylesheet" href="estilos/estilo_vista.css">
+    <link rel="stylesheet" href="estilos/estilo_producto.css">
+
 </head>
 <body>
     <header>

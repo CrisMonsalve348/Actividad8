@@ -5,7 +5,7 @@
     <title>Compra realizada</title>
     <style>
         body {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(135deg, #532889 0%, #d8cfe3 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;

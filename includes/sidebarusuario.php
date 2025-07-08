@@ -1,12 +1,11 @@
 
 <div class="barra-lateral">
 
-    <h3 class="titulo-carrito">Carrito</h3>
+    <h3 class="titulo-carrito">Gestion de cuenta</h3>
 
     <ul class="carrito">
-        <p> Productos</p>
-        <p>Total</p>
         <a href="carritoview.php">Ver carrito</a>
+        <a href="historial_pedidos.php">Historial de pedidos</a>
     </ul>
 
 

@@ -16,11 +16,11 @@ $resultado=$conexion->query($sql);
     $id_producto=$fila["producto_id"];
     ?>
 
-<ul>
-    <li style="display:flex; flex-direction:row;">
-   <p>ID:<?php echo $fila["producto_id"]; ?></p>
-   <p>
-    Producto:
+<ul class="contenido_carrito">
+        <li style="display:flex; flex-direction:column; background-color:#fbf1ef;">
+        <p>ID:<?php echo $fila["producto_id"]; ?></p>
+        <p>
+        Producto:
     <?php
     
      $sql_producto="SELECT * FROM productos WHERE id=$id_producto";
@@ -31,22 +31,27 @@ $resultado=$conexion->query($sql);
      echo  $nombre_pr["nombre"];
     ?>
    
-   </p>
+        </p>
    
-   <p>Cantidad: <?php echo $fila["unidades"]; ?></p>
-   <p>Precio unitario $<?php echo ($nombre_pr["precio"]*$fila["unidades"]); ?></p>
+    <p>Cantidad: <?php echo $fila["unidades"]; ?></p>
+    <p>Precio unitario $<?php echo ($nombre_pr["precio"]*$fila["unidades"]); ?></p>
+    <hr>
     </li>
 </ul>
+
 
 <?php 
 endwhile;
 ?>
-<h3>Total $<?php echo  $total; ?></h3>
 
-<form action="formulario_compra.php" method="post">
-    <input type="hidden" name="comprar" value="<?php echo $total; ?>">
-    <input type="submit" name="pedido" Value="Hacer Compra">
-</form>
+<div class="pago-carrito">
+    <h3 id="valor_pago">Total a pagar $<?php echo  $total; ?></h3>
+
+    <form action="formulario_compra.php" method="post">
+        <input type="hidden" name="comprar" value="<?php echo $total; ?>">
+        <input type="submit" name="pedido" Value="Hacer Compra" id="boton_compra">
+    </form>
+</div>
       
            
 

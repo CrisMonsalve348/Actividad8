@@ -329,3 +329,34 @@ display: flex;
     gap: 30px;
     flex-direction: column;
 }
+
+/*Estilos para la vista del carrito*/
+.pago-carrito{
+    width: 30%;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#boton_compra{
+    padding: 3px;
+    background-color: #e3f0a9;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+
+/* Estilos formulario de pedido */
+.formulario_pedido{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.costo h3{
+    color: #4CAF50;
+}

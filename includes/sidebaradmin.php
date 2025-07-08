@@ -1,28 +1,18 @@
 
 <section class="barra-lateral">
 
-    <h3 class="titulo-carrito">Carrito</h3>
-
-    <ul class="carrito">
-        <li><p> Productos</p></li>
-        <li><p>Total</p></li>
-       <li> <a href="carrito_vista.php">Ver carrito</a></li>
-    </ul>
-
+    <h3 class="titulo-carrito">Gestion de cuenta</h3>
 
     <h3 class="titulo-usuario"> 
     <?php 
-        echo $_SESSION["usuario"]["nombre"]." ".$_SESSION["usuario"]["apellidos"] ;
+        echo "Bienvenid@ " . $_SESSION["usuario"]["nombre"]." ".$_SESSION["usuario"]["apellidos"] ;
     ?>
     </h3>
 
     <ul class="gestion-usuario">
         <li><a href="gestionproductos.php">Gestionar productos</a></li>
         <li><a href="gestioncategorias.php">Gestionar categorias</a></li>
-      <li> <a href="#">Gestionar pedidos</a></li>
-        <li><a href="#">Mis pedidos</a></li>
-   
-
+        <a href="historial_pedidos.php">Historial de pedidos</a>
     </ul>
 
  <form action="archivos_backend/logout.php" method="post">

@@ -12,7 +12,7 @@ include "includes/sidebarusuario.php"
 
 ?>
 
-<form action="archivos_backend/validarcompra.php" method="post">
+<form action="archivos_backend/validarcompra.php" method="post" class="formulario_pedido">
 
 <input type="hidden" name="id_usuario" value="<?php echo $id_usuario;  ?>">
 Provincia
@@ -40,7 +40,9 @@ Hora
 <br>
 <input type="submit" value="Comprar">
 
-</form>
+<br>
+
+</form class="costo">
 <br>
 <h3>Costo $<?php echo $coste; ?></h3>
  </main>

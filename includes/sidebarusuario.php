@@ -6,7 +6,7 @@
     <ul class="carrito">
         <p> Productos</p>
         <p>Total</p>
-        <a href="carrito_vista.php">Ver carrito</a>
+        <a href="carritoview.php">Ver carrito</a>
     </ul>
 
 

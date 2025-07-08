@@ -24,7 +24,7 @@ $resultado=$conexion->query($sql);
 
 <p class="parrafo"><?php echo $fila["descripcion"]; ?></p>
     <div class="stacks">
-        <form action="archivos_backend/carrito.php" method="post">
+        <form action="archivos_backend/carrito_validacion.php" method="post">
     <p>Stock</p>
     <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="<?php echo $fila['stock']; ?>" class="form-control">
     </div>
@@ -32,6 +32,7 @@ $resultado=$conexion->query($sql);
 
        
         <input type="hidden" name="id_producto" Value="<?php echo $fila["id"]; ?>">
+        
         <input type="submit" id="agrega" Value="Agregar al carrito" name="Agregar">
         </form>
         <?php

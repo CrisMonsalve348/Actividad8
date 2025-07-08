@@ -36,7 +36,7 @@ if(!isset($_SESSION["usuario"])){
         <li>
             <form action="<?php echo $archivo_actual; ?>" method="post">
                 <input type="hidden" name="inicio" value="1" >
-                <input type="submit" value="inicio">
+                <input type="submit" value="inicio" style="background:none; border:none; color:purple;">
             </form>
         </li>
         

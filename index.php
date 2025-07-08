@@ -104,9 +104,9 @@ endif;
         <img src="<?php echo ($fila["imagen"]); ?>" alt="producto" class="imagen_producto">
             <p><?php echo $fila["nombre"]; ?> </p>
             <p><?php echo "$".$fila["precio"]; ?></p>
-            <form action="producto_usuario.php" method="post">
+            <form action="#" method="post">
                 <input type="hidden" name="id" value="<?php echo $fila["id"]; ?>">
-                <input type="submit" value="Comprar">
+                <input type="submit" value="Registrate para comprar">
             </form>
             
         </li>
@@ -114,7 +114,7 @@ endif;
     </ul>
 
 </section>
-
+    </main>
 <?php 
 include "includes/footer.php"
 

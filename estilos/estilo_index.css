@@ -113,6 +113,7 @@ main{
 .principalusuario{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 .categoriasyproductos{
     width: 100%;
@@ -290,8 +291,10 @@ footer{
     text-align: center;
     color: black;
     background-color: #d8cfe3;
-    position: fixed;
+    margin: 0 auto;
     width: 100%;
+    bottom: 0;
+   
 }
 
 /*estilo de la pagina de gestion de categorias*/
